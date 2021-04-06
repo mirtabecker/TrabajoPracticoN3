@@ -14,6 +14,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:text="Dolares"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,26 +60,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvEuros" />
 
-
-    <RadioButton
-        android:id="@+id/rbEuroaDolares"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+    <RadioGroup
+        android:id="@+id/radioGroup4"
+        android:layout_width="402dp"
+        android:layout_height="186dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:text="Euros a Dolares"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEuros" />
+        app:layout_constraintTop_toBottomOf="@+id/etEuros">
 
-    <RadioButton
-        android:id="@+id/rbDolaresaEuros"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Dolares a Euros"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rbEuroaDolares" />
+        <RadioButton
+            android:id="@+id/rbDolaresAEuros"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:text="Dolares a Euros" />
+
+        <RadioButton
+            android:id="@+id/rbEurosADolares"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:text="Euros a Dolares" />
+    </RadioGroup>
 
     <TextView
         android:id="@+id/tvCambio"
@@ -87,37 +91,32 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:text="Cambio a ..."
+        android:text="Resultado obtenido:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rbDolaresaEuros"/>
-
-    <Button
-        android:id="@+id/btConvertir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="104dp"
-        android:text="Convertir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup4" />
 
     <TextView
         android:id="@+id/tvResultado"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
         android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/btConvertir"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCambio"
-        app:layout_constraintVertical_bias="0.542" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCambio" />
 
+    <Button
+        android:id="@+id/btConvertir"
+        android:layout_width="134dp"
+        android:layout_height="50dp"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultado"
+        app:layout_constraintVertical_bias="0.331" />
 </androidx.constraintlayout.widget.ConstraintLayout>

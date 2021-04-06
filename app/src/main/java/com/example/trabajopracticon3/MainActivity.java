@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
     private void iniciarVista() {
         dolares = findViewById(R.id.etDolares);
         euros = findViewById(R.id.etEuros);
-        rbDolaresaEuros = findViewById(R.id.rbDolaresaEuros);
-        rbEuroaDolares = findViewById(R.id.rbEuroaDolares);
+        rbDolaresaEuros = findViewById(R.id.rbDolaresAEuros);
+        rbEuroaDolares = findViewById(R.id.rbEurosADolares);
         tvResultado = findViewById(R.id.tvResultado);
         btConvertir=findViewById(R.id.btConvertir);
         btConvertir.setOnClickListener(new View.OnClickListener() {
